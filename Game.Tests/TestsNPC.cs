@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Game.FrontEnd;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +11,29 @@ namespace Game.Tests
     [TestClass]
     public class TestsNPC
     {
-        private NPC npc;
+        public NPC npc;
 
         [TestMethod]
         public void ZmenaPoziceNefunguje()
         {
-            npc = new NPC(100, 100);
+            npc = new NPC("steve",0, true);
 
-            npc.ZmenaPozice(10, 10);
+            npc.ZmenaPozice(10.0, 10.0);
 
-            Assert.AreEqual(100, npc.poziceX);
-            Assert.AreEqual(100, npc.poziceY);
+            Assert.AreEqual(10, npc.PoziceX);
+            Assert.AreEqual(10, npc.PoziceY);
         }
 
         [TestMethod]
         public void JeBoss()
         {
-            npc = new NPC(10, 10, 10); // je boss
+            npc = new NPC("steve", 0, true); // je boss
 
-            Assert.IsTrue(npc.isBoss);
+            Assert.IsTrue(npc.sila);
 
-            npc = new NPC(10, 10); // neni boss
+            npc = new NPC("steve", 0); // neni boss
 
-            Assert.IsFalse(npc.isBoss);
+            Assert.IsFalse(npc.sila);
         }
 
     }

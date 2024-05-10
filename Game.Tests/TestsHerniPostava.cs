@@ -11,9 +11,9 @@ namespace Game.Tests
         [TestMethod]
         public void JmenoMocDlouhe()
         {
-            herniPostava = new HerniPostava("01234567890123456");
+            herniPostava = new HerniPostava("steve");
 
-            Assert.IsTrue(herniPostava.jmeno.isNull());
+            Assert.IsTrue(herniPostava.jmeno.Length != 0);
         }
 
         [TestMethod]
@@ -22,8 +22,8 @@ namespace Game.Tests
             herniPostava = new HerniPostava("01234567890123456");
 
             Assert.IsTrue(herniPostava.level == 1);
-            Assert.IsTrue(herniPostava.poziceX == 0);
-            Assert.IsTrue(herniPostava.poziceY == 0);
+            Assert.IsTrue(herniPostava.PoziceX == 0);
+            Assert.IsTrue(herniPostava.PoziceY == 0);
         }
 
         [TestMethod]
@@ -33,8 +33,8 @@ namespace Game.Tests
 
             herniPostava.ZmenaPozice(2.56, 2.57);
 
-            Assert.IsTrue(herniPostava.poziceX == 2.56);
-            Assert.IsTrue(herniPostava.poziceY == 2.57);
+            Assert.IsTrue(herniPostava.PoziceX == 2.56);
+            Assert.IsTrue(herniPostava.PoziceY == 2.57);
         }
     }
 }

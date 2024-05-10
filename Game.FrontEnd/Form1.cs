@@ -16,5 +16,17 @@ namespace Game.FrontEnd
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Hrac steve = new Hrac("Steve", "Berseker", 0, 0, 0);
+            MessageBox.Show(steve.ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NPC alex = new NPC("Alex", 0, true);
+            MessageBox.Show(alex.ToString());
+        }
     }
 }
