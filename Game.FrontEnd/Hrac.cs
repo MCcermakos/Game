@@ -8,7 +8,7 @@ namespace Game.FrontEnd
 {
     public class Hrac : HerniPostava
     {
-        private string specializace;
+        private string specializace; 
         public enum Oblicej { VelkyNos, Ušoplesk, MakeUs };
         public Oblicej oblicej = 0;
         public enum Vlasy { drdol, culik, pleska };
