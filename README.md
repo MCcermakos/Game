@@ -1,5 +1,5 @@
-##Testy vytvořili 
+Testy vytvořili: 
 Viktor Čada, Matyáš Doležal
 
-##Hru vytrořili 
+Hru vytrořili:
 Radek Čermák, Dominik Grader, Jan Bulant
